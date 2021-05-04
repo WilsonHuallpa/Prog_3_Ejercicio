@@ -16,57 +16,22 @@ Hacer los métodos necesarios en la clase usuario.
  */
 
  <?php 
-
+include 'clases/AccesoDatos.php';
 include 'clases/Usuario.php';
 
     if(isset($_POST['clave']) && isset($_POST['mail'])){
-/*
-        
+
         $clave = $_POST['clave'];
         $mail = $_POST['mail'];
 
-        $usuarioAregistrar = new Usuario($mail,$clave);
-*/
+       $usuario = usuario::TraerUnUsuarioIdMail($mail,$clave);
 
+       if($usuario != false){
+        // var_dump($usuario);
+        echo "Usuario Registrado";
+       }else{
+           echo "usuario no registrado";
+       }
         
-       // $usuarioss = Usuario::TraerTodoLosUsuario();
-/*
-        if( la clave no es un entero o no son iguales a 4 digitos){
-            echo "clave incorrecta";
-        }else{
-            if(mail es igual a los mail de los usuarios){
-
-                if(cerificac la clave si es, quiero cojer ala prii){
-                    echo "exito":
-                }else{
-                    echo "no se encuetra registrado.";
-                }
-
-            }else{
-                echo "erro en el mail.";
-            }
-        }
-
-
-        
-        foreach($usuarioss as $user){
-            echo $user->mail ,"\n";
-
-        }
-        */
     }
-
-    $numero = Usuario::TraerElMaildeUsuario($mail);
-
-    echo $numero;
-
-
-
-
-
-
-
-
-
-
 ?>

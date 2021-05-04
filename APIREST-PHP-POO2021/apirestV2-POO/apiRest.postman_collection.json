@@ -1,0 +1,167 @@
+{
+	"info": {
+		"_postman_id": "112f0dc6-8a89-499e-b63d-e4aa445873b6",
+		"name": "apiRest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost/APIREST-PHP-POO2021/apirestV2-POO/index.php/usuario/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/APIREST-PHP-POO2021/apirestV2-POO/index.php/usuario/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"APIREST-PHP-POO2021",
+						"apirestV2-POO",
+						"index.php",
+						"usuario",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/APIREST-PHP-POO2021/apirestV2-POO/index.php/usuario/3",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/APIREST-PHP-POO2021/apirestV2-POO/index.php/usuario/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"APIREST-PHP-POO2021",
+						"apirestV2-POO",
+						"index.php",
+						"usuario",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/APIREST-PHP-POO2021/apirestV2-POO/index.php/usuario/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "miguel",
+							"type": "text"
+						},
+						{
+							"key": "mail",
+							"value": "sdffs@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "clave",
+							"value": "8789",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/APIREST-PHP-POO2021/apirestV2-POO/index.php/usuario/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"APIREST-PHP-POO2021",
+						"apirestV2-POO",
+						"index.php",
+						"usuario",
+						""
+					]
+				},
+				"description": "agregar Usuario\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/APIREST-PHP-POO2021/apirestV2-POO/index.php/usuario/4",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/APIREST-PHP-POO2021/apirestV2-POO/index.php/usuario/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"APIREST-PHP-POO2021",
+						"apirestV2-POO",
+						"index.php",
+						"usuario",
+						"4"
+					]
+				},
+				"description": "Borrar un usuario"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/APIREST-PHP-POO2021/apirestV2-POO/index.php/usuario/",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "4",
+							"type": "text"
+						},
+						{
+							"key": "nombre",
+							"value": "ana",
+							"type": "text"
+						},
+						{
+							"key": "mail",
+							"value": "ana@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "clave",
+							"value": "454",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/APIREST-PHP-POO2021/apirestV2-POO/index.php/usuario/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"APIREST-PHP-POO2021",
+						"apirestV2-POO",
+						"index.php",
+						"usuario",
+						""
+					]
+				},
+				"description": "modificacion"
+			},
+			"response": []
+		}
+	]
+}

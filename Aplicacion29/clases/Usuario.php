@@ -2,29 +2,16 @@
 
 <?php 
 
-include 'AccesoDatos.php';
+
 class usuario {
 
-    public $nombre;
-    public $apellido;
-    public $clave;
-    public $mail;
-    public $fechaDeRegistro;
-    public $localidad;
-  
-
-    public function __construct($_nombre = null, $_apellido = null,$_clave = null,$_mail = null,$_localidad = null){
-
-        if($_nombre != null && $_apellido != null && $_clave != null && $_mail != null && $_localidad != null){
-            $this->nombre = $_nombre;
-            $this->apellido = $_apellido;
-            $this->clave = $_clave;
-            $this->mail = $_mail;
-            $this->localidad = $_localidad;
-            $this->fechaDeRegistro = date ("Y-m-d");
-        }
-        
-     }
+    public $_id;
+    public $_nombre;
+    public $_apellido;
+    public $_clave;
+    public $_mail;
+    public $_fechaDeRegistro;
+    public $_localidad;
 
     public function InsertarElUsuarioParametros()
     {
@@ -40,23 +27,16 @@ class usuario {
                $consulta->execute();		
                return $objetoAccesoDato->RetornarUltimoIdInsertado();
     }
-	public static function TraerTodoLosUsuario()
+	
+    public static function TraerUnUsuarioIdMail($mail,$clave) 
 	{
 			$objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso(); 
-			$consulta =$objetoAccesoDato->RetornarConsulta("select id, nombre as nombre, apellido as apellido, clave as clave, mail as mail, localidad as localidad , fecha_de_registro as fechaDeRegistro from usuario");
-			$consulta->execute();			
-			return $consulta->fetchAll(PDO::FETCH_CLASS, "Usuario");		
-	}
+			$consulta =$objetoAccesoDato->RetornarConsulta("select  id as _id, nombre as _nombre, apellido as _apellido, clave as _clave, mail as _mail, fecha_de_registro as _fechaDeRegistro, localidad as _localidad from usuario  WHERE clave=? AND mail=?");
+			$consulta->execute(array($clave, $mail));
+			$cdBuscado= $consulta->fetchObject('usuario');
+      		return $cdBuscado;				
 
-    
-	public static function TraerElMaildeUsuario($_mail) 
-	{
-			$objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso(); 
-			$consulta =$objetoAccesoDato->RetornarConsulta("select id, mail as '$_mail' from usuario WHERE mail=:_mail");
-			$consulta->bindValue(':mail', $_mail, PDO::PARAM_STR);
-			$consulta->execute();
-			//$cdBuscado= $consulta->fetchObject('cd');
-      		return $consulta->rowCount();					
+			
 	}
     
 

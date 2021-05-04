@@ -1,0 +1,312 @@
+{
+	"info": {
+		"_postman_id": "3ff34bbb-8e7f-49fa-8317-8c116bc41ed6",
+		"name": "clase6",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost/Prog_3/aplicacion33/modificacionproducto.php",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "CodigoDeBarra",
+							"value": "77900362",
+							"type": "text"
+						},
+						{
+							"key": "nombre",
+							"value": "coca",
+							"type": "text"
+						},
+						{
+							"key": "tipo",
+							"value": "liquido",
+							"type": "text"
+						},
+						{
+							"key": "stock",
+							"value": "44",
+							"type": "text"
+						},
+						{
+							"key": "precio",
+							"value": "160",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/Prog_3/aplicacion33/modificacionproducto.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"Prog_3",
+						"aplicacion33",
+						"modificacionproducto.php"
+					]
+				},
+				"description": "APlicacion33"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/Prog_3/aplicacion32/ModificacionUsuario.php",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nombre",
+							"value": "Bili",
+							"type": "text"
+						},
+						{
+							"key": "claveNueva",
+							"value": "2222",
+							"type": "text"
+						},
+						{
+							"key": "claveVieja",
+							"value": "2345",
+							"type": "text"
+						},
+						{
+							"key": "mail",
+							"value": "bhoff5@addthis.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/Prog_3/aplicacion32/ModificacionUsuario.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"Prog_3",
+						"aplicacion32",
+						"ModificacionUsuario.php"
+					]
+				},
+				"description": "APlicacion32"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/Prog_3/aplicacion31/RealizarVenta.php",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "CodigoDeBarra",
+							"value": "77900361",
+							"type": "text"
+						},
+						{
+							"key": "IdUsuario",
+							"value": "103",
+							"type": "text"
+						},
+						{
+							"key": "Item",
+							"value": "10",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/Prog_3/aplicacion31/RealizarVenta.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"Prog_3",
+						"aplicacion31",
+						"RealizarVenta.php"
+					]
+				},
+				"description": "Aplicacion31"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/Prog_3/aplicacion30/AltaProducto.php",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "codigo",
+							"value": "779003ee2",
+							"type": "text"
+						},
+						{
+							"key": "nombre",
+							"value": "Westmacott",
+							"type": "text"
+						},
+						{
+							"key": "tipo",
+							"value": "liquido",
+							"type": "text"
+						},
+						{
+							"key": "stock",
+							"value": "20",
+							"type": "text"
+						},
+						{
+							"key": "precio",
+							"value": "16",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/Prog_3/aplicacion30/AltaProducto.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"Prog_3",
+						"aplicacion30",
+						"AltaProducto.php"
+					]
+				},
+				"description": "Aplicacion30"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/Prog_3/aplicacion29/Login.php",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "clave",
+							"value": "2345",
+							"type": "text"
+						},
+						{
+							"key": "mail",
+							"value": "dkantor0@example.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/Prog_3/aplicacion29/Login.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"Prog_3",
+						"aplicacion29",
+						"Login.php"
+					]
+				},
+				"description": "Aplicacion29"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/Prog_3/aplicacion28/listado.php?_listados=usuarios",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/Prog_3/aplicacion28/listado.php?_listados=usuarios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"Prog_3",
+						"aplicacion28",
+						"listado.php"
+					],
+					"query": [
+						{
+							"key": "_listados",
+							"value": "usuarios"
+						}
+					]
+				},
+				"description": "aplicacion28"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/Prog_3/aplicacion27/Registro.php",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "_nombre",
+							"value": "wilson",
+							"type": "text"
+						},
+						{
+							"key": "_apellido",
+							"value": "huallpa",
+							"type": "text"
+						},
+						{
+							"key": "_clave",
+							"value": "2255",
+							"type": "text"
+						},
+						{
+							"key": "_mail",
+							"value": "wilsonhuallpa@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "_localidad",
+							"value": "canning",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/Prog_3/aplicacion27/Registro.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"Prog_3",
+						"aplicacion27",
+						"Registro.php"
+					]
+				},
+				"description": "Aplicacion27"
+			},
+			"response": []
+		}
+	]
+}
